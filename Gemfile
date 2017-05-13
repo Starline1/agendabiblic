@@ -5,7 +5,7 @@ source 'http://rubygems.org'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-gem 'pg'
+#gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -48,3 +48,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'materialize-sass'
 gem 'jquery-turbolinks'
+gem 'devise'
+gem 'cancan'
+
+group :development, :test do
+	gem 'sqlite3', '1.375'
+	gem 'rspec-rails', '2.11.0'
+
+group :production do
+	gem 'pg', '0.12.2'
+end
